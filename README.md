@@ -1,62 +1,61 @@
 # Flutter MongoDB App
 
-A basic Flutter application with MongoDB Atlas integration.
+A Flutter application with MongoDB Atlas integration, designed for Android devices. The application uses a FastAPI backend to handle data operations with MongoDB Atlas.
 
 ## Project Structure
 
 ```
-.
-├── backend/             # Python FastAPI backend
-│   ├── main.py         # Main FastAPI application
-│   └── requirements.txt # Python dependencies
-└── flutter_mongodb_app/ # Flutter frontend application
+flutter_mongodb_app/
+├── android/         # Android-specific files
+├── lib/            # Flutter application code
+│   ├── main.dart   # Main application entry
+│   └── services/   # Services for MongoDB integration
+└── backend/        # FastAPI backend
+    ├── main.py     # FastAPI server
+    └── requirements.txt
 ```
 
-## Backend Setup
+## Setup Instructions
 
-1. Create a Python virtual environment:
+### Backend Setup
 
-```bash
-cd backend
-python -m venv venv
-```
+1. Navigate to the backend directory:
+   ```bash
+   cd backend
+   ```
+2. Install Python dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+3. Start the FastAPI server:
+   ```bash
+   uvicorn main:app --reload
+   ```
 
-2. Activate the virtual environment:
+### Flutter App Setup
 
-- Windows: `.\venv\Scripts\activate`
-- Unix/MacOS: `source venv/bin/activate`
-
-3. Install dependencies:
-
-```bash
-pip install -r requirements.txt
-```
-
-4. Run the FastAPI server:
-
-```bash
-python -m uvicorn main:app --host 0.0.0.0 --reload
-```
-
-## Frontend Setup
-
-1. Make sure you have Flutter installed and set up.
-
-2. Install dependencies:
-
-```bash
-cd flutter_mongodb_app
-flutter pub get
-```
-
+1. Navigate to the Flutter app directory:
+   ```bash
+   cd flutter_mongodb_app
+   ```
+2. Get Flutter dependencies:
+   ```bash
+   flutter pub get
+   ```
 3. Run the app:
+   ```bash
+   flutter run
+   ```
 
-```bash
-flutter run
-```
+## Features
 
-## Technologies Used
+- Clean, minimal Flutter application structure
+- MongoDB Atlas integration through FastAPI backend
+- Android-optimized user interface
 
-- Frontend: Flutter
-- Backend: Python FastAPI
-- Database: MongoDB Atlas
+## Requirements
+
+- Flutter SDK
+- Android Studio/SDK
+- Python 3.7+
+- MongoDB Atlas account
